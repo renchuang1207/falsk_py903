@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息</title>
+    <script src="js/vue.js"></script>
+
+</head>
+<body>
+   <div id="school-app">
+        <table width="600">
+        <thead>
+            <th>学号</th>
+            <th width="200">姓名</th>
+            <th width="200">性别</th>
+            <th width="200">生日</th>
+            <th width="200">地址</th>
+            <th width="200">班级</th>
+            <th width="200">操作</th>
+        </thead>
+            <tbody>
+                <tr v-for="item in schools">
+                    <td width="200">{{item.stuid}}</td>
+                    <td width="200">{{item.stuname}}</td>
+                    <td width="200">{{item.stusex}}</td>
+                    <td width="200">{{item.stubirth}}</td>
+                    <td width="200">{{item.stuaddr}}</td>
+                    <td width="200">{{item.colid}}</td>
+                    <td width="200">
+                        <a :href="'http://127.0.0.1:5000/bank/delbank?id='+item.stuid">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+   </div>
+<script src="js/SchoolApp.js"></script>
+</body>
+</html>
